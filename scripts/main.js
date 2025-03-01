@@ -7,8 +7,8 @@ document.getElementById("todays-date").innerText =
   todaysDate.toLocaleDateString();
 
 // ----------------------------------------------------
-
-// tasks
+const activityContainer = document.getElementById("activity-container");
+const currentTime = todaysDate.toLocaleTimeString();
 
 const buttons = document.getElementsByClassName("card-btn");
 for (let button of buttons) {
@@ -24,7 +24,16 @@ for (let button of buttons) {
     document.getElementById("completed-task").innerText = completedTask + 1;
 
     // update activity
+    const activityCard = button.closest(".activity-card");
+    const h3Text = activityCard.querySelector("h3").innerText;
 
+    let div = document.createElement("div");
+    div.style.cssText =
+      "background-color: #F4F7FF; padding: 8px; border-radius:12px ";
+    div.innerHTML = `
+    <p>You have completed the task ${h3Text} at ${currentTime}</p>
+    `;
+    activityContainer.appendChild(div);
     // last alert
     if (activeTask - 1 === 0) {
       alert("Congrats!! You have completed all the current tasks!");

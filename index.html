@@ -93,7 +93,7 @@
         <!-- card container -->
         <section class="mt-6 grid grid-cols-3 gap-5">
           <!-- card 1 -->
-          <div class="bg-[#F4F7FF] rounded-2xl p-5">
+          <div class="bg-[#F4F7FF] rounded-2xl p-5 activity-card">
             <!-- texts -->
             <div class="border-b border-dashed pb-3 space-y-3">
               <p class="bg-white px-4 py-2 rounded-lg">ShopEase</p>
@@ -123,7 +123,7 @@
           </div>
 
           <!-- card 2 -->
-          <div class="bg-[#F4F7FF] rounded-2xl p-5">
+          <div class="bg-[#F4F7FF] rounded-2xl p-5 activity-card">
             <!-- texts -->
             <div class="border-b border-dashed pb-3 space-y-3">
               <p class="bg-white px-4 py-2 rounded-lg">CloudSync</p>
@@ -150,7 +150,7 @@
           </div>
 
           <!-- card 3 -->
-          <div class="bg-[#F4F7FF] rounded-2xl p-5">
+          <div class="bg-[#F4F7FF] rounded-2xl p-5 activity-card">
             <!-- texts -->
             <div class="border-b border-dashed pb-3 space-y-3">
               <p class="bg-white px-4 py-2 rounded-lg">SwiftPay</p>
@@ -180,7 +180,7 @@
           </div>
 
           <!-- card 4 -->
-          <div class="bg-[#F4F7FF] rounded-2xl p-5">
+          <div class="bg-[#F4F7FF] rounded-2xl p-5 activity-card">
             <!-- texts -->
             <div class="border-b border-dashed pb-3 space-y-3">
               <p class="bg-white px-4 py-2 rounded-lg">Meta</p>
@@ -210,7 +210,7 @@
           </div>
 
           <!-- card 5 -->
-          <div class="bg-[#F4F7FF] rounded-2xl p-5">
+          <div class="bg-[#F4F7FF] rounded-2xl p-5 activity-card">
             <!-- texts -->
             <div class="border-b border-dashed pb-3 space-y-3">
               <p class="bg-white px-4 py-2 rounded-lg">Google LLC</p>
@@ -240,7 +240,7 @@
           </div>
 
           <!-- card 6 -->
-          <div class="bg-[#F4F7FF] rounded-2xl p-5">
+          <div class="bg-[#F4F7FF] rounded-2xl p-5 activity-card">
             <!-- texts -->
             <div class="border-b border-dashed pb-3 space-y-3">
               <p class="bg-white px-4 py-2 rounded-lg">Glassdoar</p>
@@ -272,7 +272,7 @@
       </section>
 
       <!-- parent section 2 / activity log section -->
-      <section id="activity-log-sec" class="bg-white rounded-2xl p-6">
+      <section id="activity-log-sec" class="bg-white rounded-2xl py-6">
         <div
           class="flex justify-start items-center flex-col gap-4 pb-3 border-b border-dashed"
         >
@@ -281,6 +281,13 @@
             <p class="font-medium text-xl">Activity Log</p>
           </div>
           <button class="btn btn-active btn-primary px-5">Clear History</button>
+        </div>
+
+        <!-- Activity massage container -->
+        <div id="activity-container" class="card-body">
+          <!-- <div class="bg-[#F4F7FF] p-2 rounded-xl">
+            <p>You have completed the task "Name" at "time"</p>
+          </div> -->
         </div>
       </section>
     </main>
