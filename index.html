@@ -280,19 +280,18 @@
             <img src="./assets/activity.png" alt="" />
             <p class="font-medium text-xl">Activity Log</p>
           </div>
-          <button class="btn btn-active btn-primary px-5">Clear History</button>
+          <button id="clear-btn" class="btn btn-primary px-5">
+            Clear History
+          </button>
         </div>
 
         <!-- Activity massage container -->
-        <div id="activity-container" class="card-body">
-          <!-- <div class="bg-[#F4F7FF] p-2 rounded-xl">
-            <p>You have completed the task "Name" at "time"</p>
-          </div> -->
-        </div>
+        <div id="activity-container" class="card-body"></div>
       </section>
     </main>
 
     <script src="./scripts/main.js"></script>
+    <script src="./scripts/clearHistory.js"></script>
     <script src="./scripts/blog.js"></script>
   </body>
 </html>
