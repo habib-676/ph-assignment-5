@@ -3,8 +3,29 @@ const todaysDate = new Date();
 let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 document.getElementById("date-name").innerText = weekDays[todaysDate.getDay()];
-document.getElementById("todays-date").innerText =
-  todaysDate.toLocaleDateString();
+
+// get the today's date
+const day = todaysDate.getDate();
+const monthIndex = todaysDate.getMonth();
+const year = todaysDate.getFullYear();
+
+const monthNames = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+const monthName = monthNames[monthIndex];
+const currentDate = `${monthName} ${day} ${year}`;
+document.getElementById("todays-date").innerText = currentDate;
 
 // ----------------------------------------------------
 const activityContainer = document.getElementById("activity-container");
