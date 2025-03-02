@@ -8,13 +8,13 @@ document.getElementById("todays-date").innerText =
 
 // ----------------------------------------------------
 const activityContainer = document.getElementById("activity-container");
-const currentTime = todaysDate.toLocaleTimeString();
 
 const buttons = document.getElementsByClassName("card-btn");
 for (let button of buttons) {
   button.addEventListener("click", function () {
     alert("Board Updated Successfully");
     button.disabled = true;
+
     let activeTask = parseInt(document.getElementById("active-task").innerText);
     document.getElementById("active-task").innerText = activeTask - 1;
 
@@ -24,6 +24,8 @@ for (let button of buttons) {
     document.getElementById("completed-task").innerText = completedTask + 1;
 
     // update activity
+    let currentTime = new Date().toLocaleTimeString();
+
     const activityCard = button.closest(".activity-card");
     const h3Text = activityCard.querySelector("h3").innerText;
 
@@ -33,6 +35,7 @@ for (let button of buttons) {
     div.innerHTML = `
     <p>You have completed the task ${h3Text} at ${currentTime}</p>
     `;
+
     activityContainer.appendChild(div);
     // last alert
     if (activeTask - 1 === 0) {
